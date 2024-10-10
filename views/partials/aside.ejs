@@ -1,0 +1,14 @@
+  <!-- blogs list -->
+  <aside> <% if (locals.blogList) { %>
+    <ul>
+      <% for (let i=0; i<blogList.length; i++) {%>
+      <li>
+        <a href=/post<%=i%>> <%=blogList[i] %>
+        </a>
+      </li>
+      <%} %>
+    </ul>
+    <button><a href="/add">New post</a></button>
+    <% } %>
+
+  </aside>

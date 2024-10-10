@@ -1,0 +1,47 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+  <!-- blog body -->
+  <article>
+    <% if (locals.page == "home") { %>
+    <h1>Welcome to my blog!</h1>
+    <%} else if (locals.page == "about") { %>
+    <%-include("partials/about.ejs")%>
+    <%} else if (locals.page == "contact") { %>
+    <h2>Contact me</h2>
+    <section class="contact">
+      <p>123 BlueBerry Street</p>
+      <p>+ 48 123 456 789</p>
+      <p>myblog@blog.com</p>
+    </section>
+    <%} else if(locals.page == "add") { %>
+    <h2>Add new post</h2>
+    <section>
+      <form action="/submit" method="POST">
+        <label for="title">title</label>
+        <input type="text" name="title" required />
+        <label for="content">content</label>
+        <input type="text" name="content" required />
+        <input id="submit_btn" type="submit" name="submit" />
+      </form>
+    </section>
+    <%} else if(locals.page == "post_added") { %>
+    <h2>Post added</h2>
+    <% } else if(locals.page == "deleted") { %>
+    <h2>Post deleted</h2>
+    <%} else if (locals.page == "post"){%>
+    <% if (locals.blogPost) { %>
+    <h2><%= blogPost["title"] %></h2>
+    <section>
+      <p><%= blogPost["content"] %></p>
+    </section>
+    <button><a href="/delete?post_id=<%=locals.postIndex%>">delete</a></button>
+    <% } } else {%>
+    <h1>Wrong page!</h1>
+    <% } %>
+  </article>
+  <!-- blogs list -->
+  <%- include("partials/aside.ejs") %>
+</main>
+
+<%- include("partials/footer.ejs") %>

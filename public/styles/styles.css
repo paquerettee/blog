@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  color: #222;
+}
+
+button,
+#submit_btn {
+  background-color: #fdfdfd;
+  width: 125px;
+  border: #222 solid 1px;
+}
+
+a {
+  font-family: "Merriweather", serif;
+  color: #222;
+  text-decoration: none;
+}
+
+button a,
+#submit_btn a {
+  display: block;
+  /* width: 100%; */
+  line-height: 200%;
+  text-transform: capitalize;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* header button.hamburger {
+  display: none;
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+}
+
+header button.hamburger span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin: 5px;
+  background-color: #999;
+} */
+
+header nav {
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  transform: translate(-50%);
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+header nav ul a {
+  text-decoration: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main article {
+  background-image: linear-gradient(white, white),
+    url("./../images/blossom-2053457_1280-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: saturation;
+  /* opacity: 0.5;    this changes whole article -> use pseudoelement to apply opacity only to bgi */
+  /* filter: grayscale(100%);      this breaks the a href links in nav */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 90px;
+}
+
+main article h2 {
+  padding-bottom: 40px;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+main article section {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  padding: 40px;
+  /* background-color: rgba(244, 244, 244, 0.2); */
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+main article section.contact {
+  width: 300px;
+  font-size: 18px;
+  padding: 40px;
+  line-height: 2;
+  text-align: center;
+}
+
+main article button {
+  margin-top: 10%;
+  margin-right: 20%;
+  align-self: self-end;
+  grid-column: 2;
+  justify-self: right;
+}
+
+main article section form {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr 9fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+}
+
+main article form input:nth-of-type(3) {
+  grid-column: 2;
+  justify-self: right;
+  width: 30%;
+  padding: 5px;
+}
+
+main aside {
+  background-color: rgba(248, 248, 248, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main aside ul {
+  height: 70%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+main aside ul a {
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
+  left: 40%;
+  transform: translate(-50%);
+}
+
+/* @media (max-width: 1024px) {
+  /* change navigation bar into hamburger on small screens*
+  header nav {
+    display: none;
+  }
+  header button.hamburger {
+    display: block;
+  }
+} */
