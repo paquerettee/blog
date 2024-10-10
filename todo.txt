@@ -1,2 +1,3 @@
 
 add hamburger menu for small screens
+fix style for submit button
